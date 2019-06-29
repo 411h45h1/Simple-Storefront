@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./components/Header";
+{
+  /* TO DO
+  - reroute cards to store page
+  - make header look centered
+  - create ABOUT, PODCAST & CART
+      -route everything after
+  - make footer useful with contact N'ting
+  - media queries are needed for polishing
+      -header should hide left links and center logo
+      with the right hand links
+  */
 }
 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="AppHolder">
+          <Header />
+        </div>
+      </div>
+    );
+  }
+}
 export default App;

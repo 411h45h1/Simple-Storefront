@@ -1,33 +1,142 @@
 .App {
+  position: relative;
+}
+
+.AppHolder {
+  position: absolute;
+}
+.AppHolder {
+  background-color: #9b9b9ba6;
+}
+.headerH {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.headerCont {
+  white-space: nowrap;
+  align-items: center;
+}
+
+.headerCont > div {
+  display: inline-block;
+  color: black;
+}
+
+.HeadCarousel {
+  width: 97vw;
+  box-shadow: -1px 1px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.headerSectionA {
+  position: left;
+}
+
+.headerLinksA > a {
+  padding-right: 20px;
+}
+
+#headerLinkShop {
+  color: green;
+}
+
+.headerSectionB {
+  position: center;
+  padding-right: 12%;
+}
+
+.headerSectionC {
+  position: right;
+}
+.headerSectionC > div {
+  display: inline-block;
+  padding-right: 20%;
+}
+
+.headerSubSectionC {
+}
+
+.headerLinksC > a {
+  padding-right: 5px;
+}
+
+.bodyCont {
+  padding: 25px;
+  height: 100vh;
+}
+
+.bodyGrid {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer {
+  margin-top: 2%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.bodyItems {
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bodyItems > div {
+  padding: 3.4%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  box-shadow: -1px 1px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.headContainer {
+  background-color: #121212;
+}
+
+.tabs {
+  margin-left: 15vh;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-top: 0px;
+  opacity: 0.6;
+  position: absolute;
+  right: 0;
+}
+
+.tabs > button {
+  width: 100px;
+  margin: auto;
+  margin: 15px;
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.shop {
+  background-color: #333;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron {
+  background-image: url("./img/Landscape.jpg");
+}
+
+.FAQ {
+  padding: 50px;
+}
+
+a:link {
+  margin: auto;
+  text-decoration: none;
 }
