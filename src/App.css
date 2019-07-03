@@ -1,13 +1,11 @@
+.BG {
+  height: 100vh;
+  background-color: #686262a6;
+  background-size: cover;
+}
 .App {
-  position: relative;
 }
 
-.AppHolder {
-  position: absolute;
-}
-.AppHolder {
-  background-color: #9b9b9ba6;
-}
 .headerH {
   margin: auto;
   display: flex;
@@ -61,6 +59,11 @@
 
 .headerLinksC > a {
   padding-right: 5px;
+}
+
+.mainBody {
+  background-color: #686262a6;
+  padding: 10px;
 }
 
 .bodyCont {

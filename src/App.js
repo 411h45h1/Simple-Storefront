@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header";
+import Page from "./components/Page";
 {
   /* TO DO
   - reroute cards to store page
@@ -17,10 +17,8 @@ import Header from "./components/Header";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="AppHolder">
-          <Header />
-        </div>
+      <div className="BG">
+        <Page />
       </div>
     );
   }
