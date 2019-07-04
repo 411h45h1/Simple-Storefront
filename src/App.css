@@ -34,7 +34,7 @@
 }
 
 .headerLinksA > a {
-  padding-right: 20px;
+  padding-right: 10%;
 }
 
 #headerLinkShop {
@@ -43,7 +43,6 @@
 
 .headerSectionB {
   position: center;
-  padding-right: 12%;
 }
 
 .headerSectionC {
@@ -68,7 +67,7 @@
 
 .bodyCont {
   padding: 25px;
-  height: 100vh;
+  background-color: #9b9797;
 }
 
 .bodyGrid {
