@@ -3,9 +3,12 @@
   background-color: #686262a6;
   background-size: cover;
 }
+ {
+  /*
 .App {
 }
-
+*/
+}
 .headerH {
   margin: auto;
   display: flex;
@@ -52,10 +55,12 @@
   display: inline-block;
   padding-right: 20%;
 }
-
+ {
+  /*
 .headerSubSectionC {
 }
-
+*/
+}
 .headerLinksC > a {
   padding-right: 5px;
 }
