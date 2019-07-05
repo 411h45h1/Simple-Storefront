@@ -75,6 +75,20 @@
   background-color: #9b9797;
 }
 
+.homeCont {
+  margin: auto;
+  padding: 25px 1% 15px 1%;
+  background-color: #9b9797;
+  width: 100%;
+}
+
+.homeGrid {
+  display: inline;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5%;
+}
+
 .bodyGrid {
   margin: auto;
   display: flex;
