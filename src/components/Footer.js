@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="footer">
       <Card>
-        <p>&copy;Reflex • ALL RIGHTS RESERVED</p>
+        <p className="footer2">&copy;Reflex • ALL RIGHTS RESERVED</p>
       </Card>
     </div>
   );
