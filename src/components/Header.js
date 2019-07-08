@@ -86,10 +86,9 @@ class Header extends React.Component {
           </header>
           <Switch>
             <Route Path="/" exact={Page} />
-            */}
-            <Route path="/Shop" component={Store} />
-            <Route path="/Podcast" component={Podcast} />
-            <Route path="/FAQ" component={FAQ} />
+            <Route path="/Shop" Component={Store} />
+            <Route path="/Podcast" exact={Podcast} />
+            <Route path="/FAQ" exact={FAQ} />
           </Switch>
         </div>
       </Router>
