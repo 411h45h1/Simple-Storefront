@@ -1,6 +1,5 @@
 import React from "react";
 import StoreCards from "./Props/StoreCards";
-import Footer from "./Footer";
 import { Card } from "react-bootstrap";
 
 class Store extends React.Component {
@@ -79,7 +78,6 @@ class Store extends React.Component {
             </div>
           </div>
         </Card>
-        <Footer />
       </div>
     );
   }

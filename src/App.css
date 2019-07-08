@@ -3,9 +3,12 @@
   background-color: #686262a6;
   background-size: cover;
 }
+ {
+  /*
 .App {
 }
-
+*/
+}
 .headerH {
   margin: auto;
   display: flex;
@@ -52,10 +55,12 @@
   display: inline-block;
   padding-right: 20%;
 }
-
+ {
+  /*
 .headerSubSectionC {
 }
-
+*/
+}
 .headerLinksC > a {
   padding-right: 5px;
 }
@@ -70,6 +75,20 @@
   background-color: #9b9797;
 }
 
+.homeCont {
+  margin: auto;
+  padding: 25px 1% 15px 1%;
+  background-color: #9b9797;
+  width: 100%;
+}
+
+.homeGrid {
+  display: inline;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5%;
+}
+
 .bodyGrid {
   margin: auto;
   display: flex;
@@ -79,8 +98,16 @@
 }
 
 .footer {
-  margin-top: 2%;
   text-align: center;
+  margin: 0%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: #9d9999;
+}
+
+.footer2 {
+  padding-top: 1%;
+  padding-bottom: 0px;
 }
 
 .bodyItems {
