@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { ReactComponent as Logo } from "../Reflex.svg";
 import HeadCarousel from "./HeadCarousel";
 import Store from "./Store";
@@ -85,8 +85,7 @@ class Header extends React.Component {
             <HeadCarousel />
           </header>
           <Switch>
-            <Route Path="/" exact={Page} />
-            */}
+            {/*<Route Path="/" exact={Page} />*/}
             <Route path="/Shop" component={Store} />
             <Route path="/Podcast" component={Podcast} />
             <Route path="/FAQ" component={FAQ} />
