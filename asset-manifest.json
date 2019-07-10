@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/React-JS-Store/static/css/main.aff28aab.chunk.css",
-    "main.js": "/React-JS-Store/static/js/main.3f4f5bfc.chunk.js",
-    "main.js.map": "/React-JS-Store/static/js/main.3f4f5bfc.chunk.js.map",
-    "runtime~main.js": "/React-JS-Store/static/js/runtime~main.7309c2ed.js",
-    "runtime~main.js.map": "/React-JS-Store/static/js/runtime~main.7309c2ed.js.map",
-    "static/css/2.266e55a5.chunk.css": "/React-JS-Store/static/css/2.266e55a5.chunk.css",
-    "static/js/2.76b5f615.chunk.js": "/React-JS-Store/static/js/2.76b5f615.chunk.js",
-    "static/js/2.76b5f615.chunk.js.map": "/React-JS-Store/static/js/2.76b5f615.chunk.js.map",
-    "index.html": "/React-JS-Store/index.html",
-    "precache-manifest.3cd76c9e7db5ab23057952c990545459.js": "/React-JS-Store/precache-manifest.3cd76c9e7db5ab23057952c990545459.js",
-    "service-worker.js": "/React-JS-Store/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/React-JS-Store/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.aff28aab.chunk.css.map": "/React-JS-Store/static/css/main.aff28aab.chunk.css.map",
-    "static/media/Item3.png": "/React-JS-Store/static/media/Item3.d8705991.png",
-    "static/media/App.css": "/React-JS-Store/static/media/Landscape.e2c569e6.jpg",
-    "static/media/Reflex.0888aec8.svg": "/React-JS-Store/static/media/Reflex.0888aec8.svg"
+    "main.css": "/static/css/main.9554df04.chunk.css",
+    "main.js": "/static/js/main.a48efb6e.chunk.js",
+    "main.js.map": "/static/js/main.a48efb6e.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.266e55a5.chunk.css": "/static/css/2.266e55a5.chunk.css",
+    "static/js/2.76b5f615.chunk.js": "/static/js/2.76b5f615.chunk.js",
+    "static/js/2.76b5f615.chunk.js.map": "/static/js/2.76b5f615.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.89f0617a3e4f709842ee3b47e7d18121.js": "/precache-manifest.89f0617a3e4f709842ee3b47e7d18121.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.9554df04.chunk.css.map": "/static/css/main.9554df04.chunk.css.map",
+    "static/media/Item3.png": "/static/media/Item3.d8705991.png",
+    "static/media/App.css": "/static/media/Landscape.e2c569e6.jpg",
+    "static/media/Reflex.0888aec8.svg": "/static/media/Reflex.0888aec8.svg"
   }
 }
