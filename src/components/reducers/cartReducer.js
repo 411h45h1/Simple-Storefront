@@ -1,6 +1,6 @@
-import Item1 from "../../images/Item1.png";
-import Item2 from "../../images/Item2.png";
-import Item3 from "../../images/Item3.png";
+import Item1 from "https://picsum.photos/500/250";
+import Item2 from "https://picsum.photos/500/250";
+import Item3 from "https://picsum.photos/500/250";
 
 const initState = {
   items: [

@@ -9,14 +9,14 @@ export default class Page extends React.Component {
     super(props);
 
     this.state = {
-      showItem: false
+      showItem: true
     };
     this.toggleHidden = this.toggleHidden.bind(this);
   }
 
   toggleHidden() {
     this.setState({
-      showItem: true
+      showItem: false
     });
   }
 
@@ -24,7 +24,11 @@ export default class Page extends React.Component {
     return (
       <div className="App">
         <Header hide={this.toggleHidden} />
-        {this.state.showItem ? null : <HomePage />}
+        {this.state.showItem ? <HomePage /> : null}
+        {/*issue
+          if page is refreshed on left links the 
+          homePage comp appears  */}
+
         <Footer />
       </div>
     );

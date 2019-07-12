@@ -6,13 +6,7 @@ import Store from "./Store";
 import Podcast from "./Podcast";
 import FAQ from "./FAQ";
 import HomePage from "./HomePage";
-
-{
-  /* 
-  -redesign the header for links react-router
-  -make dummy cards for left-links
-  */
-}
+import CartPage from "./addToCart/CartPage";
 
 class Header extends React.Component {
   constructor(props) {
@@ -86,7 +80,16 @@ class Header extends React.Component {
                     </div>
                   </nav>
                 </div>
-                <a>cart (0)</a>
+                <Link
+                  to="/Cart"
+                  style={{
+                    textDecoration: "none",
+                    color: "black"
+                  }}
+                  onClick={this.props.hide}
+                >
+                  cart (0)
+                </Link>
               </div>
             </div>
             <HeadCarousel />
@@ -96,6 +99,7 @@ class Header extends React.Component {
           <Route path="/Shop" component={Store} />
           <Route path="/Podcast" component={Podcast} />
           <Route path="/FAQ" component={FAQ} />
+          <Route path="/Cart" component={CartPage} />
         </div>
       </Router>
     );
