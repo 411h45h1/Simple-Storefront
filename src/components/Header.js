@@ -1,11 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { ReactComponent as Logo } from "../Reflex.svg";
 import HeadCarousel from "./HeadCarousel";
 import Store from "./Store";
 import Podcast from "./Podcast";
 import FAQ from "./FAQ";
-import Page from "./Page";
 {
   /* 
   -redesign the header for links react-router
@@ -14,6 +13,9 @@ import Page from "./Page";
 }
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <Router>
@@ -29,6 +31,7 @@ class Header extends React.Component {
                         textDecoration: "none",
                         color: "black"
                       }}
+                      onClick={this.props.hide}
                     >
                       Shop
                     </Link>
@@ -38,6 +41,7 @@ class Header extends React.Component {
                         textDecoration: "none",
                         color: "black"
                       }}
+                      onClick={this.props.hide}
                     >
                       Podcast
                     </Link>
@@ -47,6 +51,7 @@ class Header extends React.Component {
                         textDecoration: "none",
                         color: "black"
                       }}
+                      onClick={this.props.hide}
                     >
                       FAQ
                     </Link>
