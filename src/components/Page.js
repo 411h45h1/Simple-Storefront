@@ -19,6 +19,7 @@ export default class Page extends React.Component {
       showItem: true
     });
   }
+
   render() {
     return (
       <div className="App">

@@ -5,6 +5,8 @@ import HeadCarousel from "./HeadCarousel";
 import Store from "./Store";
 import Podcast from "./Podcast";
 import FAQ from "./FAQ";
+import HomePage from "./HomePage";
+
 {
   /* 
   -redesign the header for links react-router
@@ -89,12 +91,11 @@ class Header extends React.Component {
             </div>
             <HeadCarousel />
           </header>
-          <Switch>
-            {/*<Route Path="/" exact={Page} />*/}
-            <Route path="/Shop" component={Store} />
-            <Route path="/Podcast" component={Podcast} />
-            <Route path="/FAQ" component={FAQ} />
-          </Switch>
+
+          <Route Path="/" exact={HomePage} />
+          <Route path="/Shop" component={Store} />
+          <Route path="/Podcast" component={Podcast} />
+          <Route path="/FAQ" component={FAQ} />
         </div>
       </Router>
     );
