@@ -5,10 +5,56 @@
 }
  {
   /*
-.App {
-}
+fix the css on the home page to have proper overlays
+              or
+figure it out using large buttons
 */
 }
+
+.container {
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50%;
+}
+
+.container > img {
+  display: block;
+  height: 250px;
+  width: 300px;
+  padding: 2%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .headerH {
   margin: auto;
   display: flex;
@@ -55,6 +101,7 @@
   display: inline-block;
   padding-right: 20%;
 }
+
  {
   /*
 .headerSubSectionC {
@@ -70,6 +117,14 @@
   padding: 10px;
 }
 
+.itemCont {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 25px 1% 15px 1%;
+  width: 100%;
+}
+
 .bodyCont {
   padding: 25px;
   background-color: #9b9797;
@@ -82,24 +137,30 @@
   width: 100%;
 }
 
-.homeGrid {
-  display: inline;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 5%;
-}
-
-.cartCont {
+.storeCont {
   margin: auto;
-  padding: 25px 1% 15px 1%;
+  padding: 25px;
   background-color: #9b9797;
   width: 100%;
 }
 
-.cartGrid {
-  display: inline;
+.cardCont {
+  padding: 3%;
+  justify-content: space-around;
+}
+
+.cardGrid {
+  padding: 3%;
+}
+
+.itemCont {
+  justify-content: center;
+}
+
+.homeGrid {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
   padding: 5%;
 }
 
@@ -122,16 +183,6 @@
 .footer2 {
   padding-top: 1%;
   padding-bottom: 0px;
-}
-
-.bodyItems {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.bodyItems > div {
-  padding: 3.4%;
 }
 
 .card {

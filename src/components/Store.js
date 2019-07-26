@@ -1,3 +1,5 @@
+{
+  /*
 import React from "react";
 import StoreCards from "./Props/StoreCards";
 import { Card } from "react-bootstrap";
@@ -83,3 +85,5 @@ class Store extends React.Component {
   }
 }
 export default Store;
+*/
+}

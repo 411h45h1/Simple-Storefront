@@ -1,8 +1,8 @@
 import React from "react";
-import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../Reflex.svg";
 import HeadCarousel from "./HeadCarousel";
-import Store from "./Store";
+import Store from "./Store copy";
 import Podcast from "./Podcast";
 import FAQ from "./FAQ";
 import HomePage from "./HomePage";
