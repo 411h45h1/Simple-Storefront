@@ -9,7 +9,7 @@ const employeeListSchema = new Schema(
       required: true,
       unique: true,
       trim: true,
-      minlength: 5
+      minlength: 3
     },
     title: { type: String, required: true, trim: true, minlength: 3 }
   },
