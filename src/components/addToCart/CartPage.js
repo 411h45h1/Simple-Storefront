@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+
 class Cart extends Component {
   render() {
     let addedItems = this.props.items.length ? (
