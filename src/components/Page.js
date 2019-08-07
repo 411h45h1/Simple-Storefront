@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import Header from "./Header";
 import HomePage from "./HomePage";
-import Footer from "./Footer";
+import { Card } from "react-bootstrap";
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -22,14 +22,14 @@ export default class Page extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header hide={this.toggleHidden} />
-        {this.state.showItem ? <HomePage /> : null}
-        {/*issue
-          if page is refreshed on left links the 
-          homePage comp appears  */}
-
-        <Footer />
+      <div className="app">
+        <div>
+          <Header hide={this.toggleHidden} />
+          {this.state.showItem ? <HomePage /> : null}
+          <Card className="footer">
+            <p id="footerP">&copy;Reflex • ALL RIGHTS RESERVED</p>
+          </Card>
+        </div>
       </div>
     );
   }

@@ -1,236 +1,95 @@
-.BG {
-  height: 100vh;
-  background-color: #686262a6;
+html {
+  background-color: #c4c4c4;
   background-size: cover;
 }
- {
-  /*
-fix the css on the home page to have proper overlays
-              or
-figure it out using large buttons
-*/
+
+.app {
+  background-color: #c4c4c4;
+  background-size: cover;
 }
 
-.container {
-  position: relative;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 50%;
-}
-
-.container > img {
-  display: block;
-  height: 250px;
-  width: 300px;
-  padding: 2%;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #008cba;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.headerH {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* Header */
 
 .headerCont {
-  white-space: nowrap;
-  align-items: center;
-}
-
-.headerCont > div {
-  display: inline-block;
-  color: black;
-}
-
-.HeadCarousel {
-  width: 97vw;
-  box-shadow: -1px 1px 20px 0px rgba(0, 0, 0, 0.75);
-}
-
-.headerSectionA {
-  position: left;
-}
-
-.headerLinksA > a {
-  padding-right: 10%;
-}
-
-#headerLinkShop {
-  color: green;
-}
-
-.headerSectionB {
-  position: center;
-}
-
-.headerSectionC {
-  position: right;
-}
-.headerSectionC > div {
-  display: inline-block;
-  padding-right: 20%;
-}
-
- {
-  /*
-.headerSubSectionC {
-}
-*/
-}
-.headerLinksC > a {
-  padding-right: 5px;
-}
-
-.mainBody {
-  background-color: #686262a6;
-  padding: 10px;
-}
-
-.itemCont {
   display: flex;
   margin: auto;
+}
+
+.headerCont > header {
+  margin: auto;
+  margin-right: 0%;
+  justify-content: flex-end;
+}
+
+.headerLink {
+  display: flex;
+}
+
+.headerLink > div {
+  padding-right: 30px;
+}
+
+/*Carousel */
+
+.HeadCarousel {
+  padding: 0.6%;
+}
+
+/*Store*/
+
+.shopCont {
+  padding: 1.2%;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+}
+
+.shopGrid {
+  display: flex;
   flex-wrap: wrap;
-  padding: 25px 1% 15px 1%;
-  width: 100%;
-}
-
-.bodyCont {
-  padding: 25px;
-  background-color: #9b9797;
-}
-
-.homeCont {
-  margin: auto;
-  padding: 25px 1% 15px 1%;
-  background-color: #9b9797;
-  width: 100%;
-}
-
-.storeCont {
-  margin: auto;
-  padding: 25px;
-  background-color: #9b9797;
-  width: 100%;
-}
-
-.cardCont {
-  padding: 3%;
+  padding: 5%;
   justify-content: space-around;
 }
 
-.cardGrid {
-  padding: 3%;
+.card {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1em;
 }
 
-.itemCont {
-  justify-content: center;
-}
+/*FAQ*/
 
-.homeGrid {
+.FAQCont {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  padding: 5%;
-}
-
-.bodyGrid {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.footer {
-  text-align: center;
-  margin: 0%;
-  padding-left: 1%;
-  padding-right: 1%;
-  background-color: #9d9999;
-}
-
-.footer2 {
-  padding-top: 1%;
-  padding-bottom: 0px;
-}
-
-.card {
-  box-shadow: -1px 1px 20px 0px rgba(0, 0, 0, 0.75);
-}
-
-.headContainer {
-  background-color: #121212;
-}
-
-.tabs {
-  margin-left: 15vh;
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding-top: 0px;
-  opacity: 0.6;
-  position: absolute;
-  right: 0;
-}
-
-.tabs > button {
-  width: 100px;
-  margin: auto;
-  margin: 15px;
-  border: 2px solid;
-  border-radius: 10px;
-  font-size: 15px;
-  text-align: center;
-}
-
-.shop {
-  background-color: #333;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jumbotron {
-  background-image: url("./img/Landscape.jpg");
+  padding: 2%;
+  justify-content: space-around;
 }
 
 .FAQ {
-  padding: 50px;
+  padding: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
 }
 
-a:link {
-  margin: auto;
-  text-decoration: none;
+/*footer*/
+
+.footer {
+  display: flex;
+  margin: 1%;
+}
+
+#footerP {
+  justify-content: center;
+}
+
+/*Projects*/
+.projects {
+  display: flex;
+  justify-content: center;
+}
+.projects > div {
+  display: flex;
+  margin: 3%;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
 }

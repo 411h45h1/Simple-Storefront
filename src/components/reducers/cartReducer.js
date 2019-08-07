@@ -59,3 +59,5 @@ const initState = {
   addedItems: [],
   total: 0
 };
+
+export default cartReducer;

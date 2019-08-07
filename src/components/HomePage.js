@@ -9,26 +9,7 @@ class HomePage extends React.Component {
     return (
       <div className="homeCont">
         <Card>
-          <div className="homeGrid">
-            <div className="container">
-              <img src={Deadlift} />
-              <div className="overlay">
-                <div className="text">1</div>
-              </div>
-            </div>
-            <div className="container">
-              <img src={Football} />
-              <div className="overlay">
-                <div className="text">2</div>
-              </div>
-            </div>
-            <div className="container">
-              <img src={Bike} />
-              <div className="overlay">
-                <div className="text">3</div>
-              </div>
-            </div>
-          </div>
+          <div className="homeGrid" />
         </Card>
       </div>
     );
