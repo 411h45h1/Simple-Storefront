@@ -6,6 +6,10 @@ const app = express();
 // Connect Database
 connectDB();
 
+//Init Middleware
+// allows (req.body) to work in routes/users
+app.use(express.json({ extended: false }));
+
 app.get("/", (req, res) => res.json({ msg: "api started" }));
 
 // Define Routes
