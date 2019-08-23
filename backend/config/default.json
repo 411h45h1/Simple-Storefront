@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://dbAdmin:9kWCzBkKCgRa8ib@reflexbackend-be4tq.mongodb.net/test?retryWrites=true&w=majority"
+}
