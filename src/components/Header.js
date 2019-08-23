@@ -5,6 +5,7 @@ import HeadCarousel from "./HeadCarousel";
 import Store from "./Store";
 import Projects from "./projects";
 import FAQ from "./FAQ";
+import Login from "./Login";
 import HomePage from "./HomePage";
 import CartPage from "./addToCart/CartPage";
 
@@ -107,6 +108,18 @@ class Header extends React.Component {
                     cart(0)
                   </Link>
                 </div>
+                <div>
+                  <Link
+                    to="/Login"
+                    style={{
+                      textDecoration: "none",
+                      color: "black"
+                    }}
+                    onClick={this.props.hide}
+                  >
+                    Login
+                  </Link>
+                </div>
               </nav>
             </header>
           </div>
@@ -117,6 +130,7 @@ class Header extends React.Component {
           <Route path="/Projects" component={Projects} />
           <Route path="/FAQ" component={FAQ} />
           <Route path="/Cart" component={CartPage} />
+          <Route path="/Login" component={Login} />
         </div>
       </Router>
     );

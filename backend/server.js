@@ -1,27 +1,15 @@
 const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-
-require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 5000;
 
-app.use(cors());
-app.use(express.json());
+app.get("/", (req, res) => res.json({ msg: "api started" }));
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
+// Define Routes
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/content", require("./routes/Content"));
+app.use("/api/users", require("./routes/users"));
 
-const connection = mongoose.connection;
-connection.once("open", () => {
-  console.log("MongoDB database connection established successfully");
-});
+// looks for an env variable named port during production or port 5k
+const PORT = process.env.PORT || 5000;
 
-const employeeListRouter = require("./routes/employeeLists");
-
-app.use("/employeeLists", employeeListRouter);
-
-app.listen(port, () => {
-  console.log(`Server is running on port: ${port}`);
-});
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
