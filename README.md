@@ -1,3 +1,5 @@
 ## Reflex website (INCOMPLETE)
+-this repository is to be viewed as a demonstration of programming comprehension 
 
-this is the offical webpage for Reflex
+Backend: Express js and Mongodb
+Frontend: React js 
