@@ -1,3 +1,4 @@
+//!!reminder: add image storage within the Shop model
 const express = require("express");
 const connectDB = require("./config/db");
 

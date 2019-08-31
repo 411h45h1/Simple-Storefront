@@ -32,6 +32,7 @@ router.post(
   "/",
   [
     auth,
+    //uses auth verify if content is valid
     [
       check("name", "Name is required")
         .not()
@@ -72,19 +73,54 @@ router.post(
 );
 
 // @router  PUT api/shop/:id
-// @desc    Get all content
-// @access  Private
+// @desc    Update  content
+// @access  Private (only for admin users)
 
-router.put("/:id", (req, res) => {
-  res.send("update episode");
+router.put("/:id", auth, async (req, res) => {
+  const { name, colour, size } = req.body;
+
+  // build content object
+  const contentFields = {};
+  if (name) contentFields.name = name;
+  if (colour) contentFields.colour = colour;
+  if (size) contentFields.size = size;
+
+  try {
+    let content = await Content.findById(req.params.id);
+    if (!content) return res.status(404).json({ msg: "Content not found" });
+
+    //update function
+    content = await Content.findByIdAndUpdate(
+      req.params.id,
+      { $set: contentFields },
+      //if contact doesn't exist make a new one
+      { new: true }
+    );
+
+    res.json(content);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 // @router  PUT api/shop/:id
 // @desc    Get all content
 // @access  Private
 
-router.delete("/:id", (req, res) => {
-  res.send("Delete episode");
+router.delete("/:id", auth, async (req, res) => {
+  try {
+    let content = await Content.findById(req.params.id);
+
+    if (!content) return res.status(404).json({ msg: "Content not found" });
+
+    await Content.findByIdAndRemove(req.params.id);
+
+    res.json({ msg: "Content Removed" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 module.exports = router;
