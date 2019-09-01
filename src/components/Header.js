@@ -63,19 +63,6 @@ class Header extends React.Component {
                     Shop
                   </Link>
                 </div>
-<<<<<<< HEAD
-                <a>cart (0)</a>
-              </div>
-            </div>
-            <HeadCarousel />
-          </header>
-          <Switch>
-            <Route Path="/" exact={Page} />
-            <Route path="/Shop" component={Store} />
-            <Route path="/Podcast" component={Podcast} />
-            <Route path="/FAQ" component={FAQ} />
-          </Switch>
-=======
                 <div>
                   <Link
                     to="/Projects"
@@ -144,7 +131,6 @@ class Header extends React.Component {
           <Route path="/FAQ" component={FAQ} />
           <Route path="/Cart" component={CartPage} />
           <Route path="/Login" component={Login} />
->>>>>>> Express-MongoDB
         </div>
       </Router>
     );
