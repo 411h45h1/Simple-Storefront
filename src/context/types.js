@@ -1,0 +1,9 @@
+export const ADD_CONTENT = "ADD_CONTENT";
+export const DELETE_CONTENT = "DELETE_CONTENT";
+export const SET_CURRENT = "SET_CURRENT";
+export const CLEAR_CURRENT = "CLEAR_CURRENT";
+export const UPDATE_CONTENT = "UPDATE_CONTENT";
+export const FILTER_CONTENTS = "FILTER_CONTENTS";
+export const CLEAR_FILTER = "CLEAR_FILTER";
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";

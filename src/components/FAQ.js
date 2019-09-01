@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 function FAQ() {
   return (
-    <div className="bodyCont">
+    <div className="FAQCont">
       <Card>
         <div className="FAQ">
           <h1>FAQ</h1>
