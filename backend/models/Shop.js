@@ -17,6 +17,10 @@ const ShopSchema = mongoose.Schema({
     type: String,
     require: true
   },
+  quantity: {
+    type: String,
+    require: true
+  },
   date: {
     type: Date,
     default: Date.now

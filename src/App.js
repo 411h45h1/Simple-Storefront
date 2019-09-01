@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./App.css";
+
 import Page from "./components/Page";
+import ContentState from "./context/content/contentState";
 {
   /* TO DO
   - reroute cards to store page
@@ -14,9 +16,11 @@ import Page from "./components/Page";
 class App extends Component {
   render() {
     return (
-      <div className="BG">
-        <Page />
-      </div>
+      <ContentState>
+        <Fragment className="BG">
+          <Page />
+        </Fragment>
+      </ContentState>
     );
   }
 }
