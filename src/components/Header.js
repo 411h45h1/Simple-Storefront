@@ -2,12 +2,11 @@ import React from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../Reflex.svg";
 import HeadCarousel from "./HeadCarousel";
-import Store from "./Store";
-import Projects from "./projects";
-import FAQ from "./FAQ";
-import Login from "./Login";
-import HomePage from "./HomePage";
-import CartPage from "./addToCart/CartPage";
+import Store from "./pages/Store";
+import Projects from "./pages/projects";
+import FAQ from "./pages/FAQ";
+import Login from "./pages/Login";
+import HomePage from "./pages/HomePage";
 
 class Header extends React.Component {
   constructor(props) {
@@ -129,7 +128,6 @@ class Header extends React.Component {
           <Route path="/Shop" component={Store} />
           <Route path="/Projects" component={Projects} />
           <Route path="/FAQ" component={FAQ} />
-          <Route path="/Cart" component={CartPage} />
           <Route path="/Login" component={Login} />
         </div>
       </Router>

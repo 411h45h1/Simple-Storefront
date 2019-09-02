@@ -2,6 +2,6 @@
 
 import { createContext } from "react";
 
-const contextContext = createContext();
+const contentContext = createContext();
 
-export default contactContext;
+export default contentContext;

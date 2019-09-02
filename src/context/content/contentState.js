@@ -14,7 +14,7 @@ import {
 
 const ContentState = props => {
   const initialState = {
-    content: [
+    contents: [
       {
         id: 1,
         name: "Gucci flip flops",
@@ -35,10 +35,31 @@ const ContentState = props => {
         colour: "white",
         size: "s",
         quantity: "2"
+      },
+      {
+        id: 4,
+        name: "garbage",
+        colour: "red",
+        size: "l",
+        quantity: "5"
+      },
+      {
+        id: 5,
+        name: "more garbage",
+        colour: "red",
+        size: "s",
+        quantity: "24"
+      },
+      {
+        id: 6,
+        name: "sauce",
+        colour: "red",
+        size: "m",
+        quantity: "55"
       }
     ]
   };
-  const [state, dispatch] = useReducer(contactReducer, initialState);
+  const [state, dispatch] = useReducer(contentReducer, initialState);
 
   // ADD CONTENT
 
@@ -57,7 +78,7 @@ const ContentState = props => {
   return (
     <contentContext.Provider
       value={{
-        content: state.content
+        contents: state.contents
       }}
     >
       {props.children}

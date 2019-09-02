@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
 import Header from "./Header";
-import HomePage from "./HomePage";
 import { Card } from "react-bootstrap";
+import HomePage from "./pages/HomePage";
 
 export default class Page extends React.Component {
   constructor(props) {

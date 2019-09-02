@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 export default class Login extends React.Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <h1>Admin Login</h1>
-      </div>
+      </Fragment>
     );
   }
 }
