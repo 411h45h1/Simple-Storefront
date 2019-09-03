@@ -5,8 +5,10 @@ import HeadCarousel from "./HeadCarousel";
 import Store from "./pages/Store";
 import Projects from "./pages/projects";
 import FAQ from "./pages/FAQ";
-import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
+
+import Register from "./auth/Register";
+import Login from "./auth/Login";
 
 class Header extends React.Component {
   constructor(props) {
@@ -129,6 +131,7 @@ class Header extends React.Component {
           <Route path="/Projects" component={Projects} />
           <Route path="/FAQ" component={FAQ} />
           <Route path="/Login" component={Login} />
+          <Route path="/Register" component={Register} />
         </div>
       </Router>
     );
