@@ -1,6 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import AuthContext from "../../context/auth/authContext";
+import AlertContext from "../../context/alert/alertContext";
 
 const Register = () => {
+  const authContext = useContext(AuthContext);
+  const alertContext = useContext(AlertContext);
+
+  const { setAlert } = alertContext;
+  const { register, error, clearErrors } = authContext;
+
+  //following code block is for flagging that a user already exists
+  useEffect(() => {
+    //in large scale production use an err id system
+    if (error === "User already exists") {
+      setAlert(error, "danger");
+      clearErrors();
+    }
+    //makes error a dependancy
+  }, [error]);
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -15,6 +33,14 @@ const Register = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+    if (name === "" || email === "" || password === "") {
+      setAlert("Please enter all fields", "danger");
+    } else if (password !== password2) {
+      setAlert("Passwords do not match", "danger");
+    } else {
+      register({ name, email, password });
+    }
+
     console.log("Register Submit");
   };
 
@@ -24,31 +50,47 @@ const Register = () => {
       <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="name">Name </label>
-          <input type="text" name="name" value={name} onChange={onChange} />
+          <input
+            required
+            type="text"
+            name="name"
+            value={name}
+            onChange={onChange}
+          />
         </div>
 
         <div>
           <label htmlFor="email">Email Address </label>
-          <input type="email" name="email" value={email} onChange={onChange} />
+          <input
+            required
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+          />
         </div>
 
         <div>
           <label htmlFor="password">Password </label>
           <input
+            required
             type="password"
             name="password"
             value={password}
             onChange={onChange}
+            minLength="6"
           />
         </div>
 
         <div>
           <label htmlFor="password2">Confirm Password </label>
           <input
+            required
             type="password2"
             name="password2"
             value={password2}
             onChange={onChange}
+            minLength="6"
           />
         </div>
 

@@ -22,12 +22,19 @@ const Login = () => {
       <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="email">Email Address </label>
-          <input type="email" name="email" value={email} onChange={onChange} />
+          <input
+            required
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+          />
         </div>
 
         <div>
           <label htmlFor="password">Password </label>
           <input
+            required
             type="password"
             name="password"
             value={password}
