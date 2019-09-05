@@ -1,88 +1,52 @@
 import React, { useReducer } from "react";
+import axios from "axios";
 import uuid from "uuid";
 import contentContext from "./contentContext";
 import contentReducer from "./contentReducer";
-import {
-  ADD_CONTENT,
-  DELETE_CONTENT,
-  SET_CURRENT,
-  CLEAR_CURRENT,
-  UPDATE_CONTENT,
-  FILTER_CONTENT,
-  CLEAR_FILTER
-} from "../types";
+import { ADD_CONTENT, CONTENT_ERROR } from "../types";
 
 const ContentState = props => {
   const initialState = {
-    contents: [
-      {
-        id: 1,
-        name: "Gucci flip flops",
-        colour: "Black",
-        size: "l",
-        quantity: "40"
-      },
-      {
-        id: 2,
-        name: "Cuggi Sweater",
-        colour: "red",
-        size: "xl",
-        quantity: "500"
-      },
-      {
-        id: 3,
-        name: "nike socks",
-        colour: "white",
-        size: "s",
-        quantity: "2"
-      },
-      {
-        id: 4,
-        name: "garbage",
-        colour: "red",
-        size: "l",
-        quantity: "5"
-      },
-      {
-        id: 5,
-        name: "more garbage",
-        colour: "red",
-        size: "s",
-        quantity: "24"
-      },
-      {
-        id: 6,
-        name: "sauce",
-        colour: "red",
-        size: "m",
-        quantity: "55"
-      }
-    ]
+    contents: [],
+    current: null,
+    filtered: null,
+    error: null
   };
   const [state, dispatch] = useReducer(contentReducer, initialState);
 
   // ADD CONTENT
+  const addContent = async content => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
 
-  //DELETE CONTENT
+    try {
+      const res = await axios.post("/api/shop", content, config);
 
-  //SET CURRENT CONTENT
-
-  //CLEAR CURRENT CONTENT
-
-  //UPDATE CONTENT
-
-  //FILTER CONTENT
-
-  //CLEAR FILTER
+      dispatch({
+        type: ADD_CONTENT,
+        payload: res.data
+      });
+    } catch (err) {
+      console.log("add content error");
+    }
+  };
 
   return (
     <contentContext.Provider
       value={{
-        contents: state.contents
+        contents: state.contents,
+        current: state.current,
+        filtered: state.filtered,
+        error: state.error,
+        addContent
       }}
     >
       {props.children}
     </contentContext.Provider>
   );
 };
+
 export default ContentState;

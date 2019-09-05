@@ -2,22 +2,26 @@ import React, { useState, useContext, useEffect } from "react";
 import AuthContext from "../../context/auth/authContext";
 import AlertContext from "../../context/alert/alertContext";
 
-const Register = () => {
+const Register = props => {
   const authContext = useContext(AuthContext);
   const alertContext = useContext(AlertContext);
 
   const { setAlert } = alertContext;
-  const { register, error, clearErrors } = authContext;
+  const { register, error, clearErrors, isAuthenticated } = authContext;
 
   //following code block is for flagging that a user already exists
   useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/");
+    }
     //in large scale production use an err id system
     if (error === "User already exists") {
       setAlert(error, "danger");
       clearErrors();
     }
-    //makes error a dependancy
-  }, [error]);
+
+    // eslint-disable-next-line
+  }, [error, isAuthenticated, props.history]);
 
   const [user, setUser] = useState({
     name: "",
