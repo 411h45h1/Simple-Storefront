@@ -3,16 +3,27 @@ import axios from "axios";
 import uuid from "uuid";
 import contentContext from "./contentContext";
 import contentReducer from "./contentReducer";
-import { ADD_CONTENT, CONTENT_ERROR } from "../types";
+import { ADD_CONTENT, GET_CONTENT, CONTENT_ERROR } from "../types";
 
 const ContentState = props => {
   const initialState = {
-    contents: [],
-    current: null,
-    filtered: null,
-    error: null
+    contents: []
   };
   const [state, dispatch] = useReducer(contentReducer, initialState);
+
+  //Get Content
+  const getContent = async () => {
+    try {
+      const res = await axios.get("/api/shop");
+
+      dispatch({
+        type: GET_CONTENT,
+        payload: res.data
+      });
+    } catch (err) {
+      console.log("get content error");
+    }
+  };
 
   // ADD CONTENT
   const addContent = async content => {
@@ -38,10 +49,8 @@ const ContentState = props => {
     <contentContext.Provider
       value={{
         contents: state.contents,
-        current: state.current,
-        filtered: state.filtered,
-        error: state.error,
-        addContent
+        addContent,
+        getContent
       }}
     >
       {props.children}

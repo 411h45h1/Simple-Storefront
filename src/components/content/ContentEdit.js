@@ -42,14 +42,39 @@ const ContentEdit = () => {
         name="colour"
         value={colour}
         onChange={onChange}
-      />{" "}
+      />
+      s
       <input
-        type="text"
-        placeholder="Size"
+        type="checkbox"
         name="size"
-        value={size}
+        value={"s"}
         onChange={onChange}
-      />{" "}
+        checked={size === "s"}
+      />
+      m
+      <input
+        type="checkbox"
+        name="size"
+        value={"m"}
+        onChange={onChange}
+        checked={size === "m"}
+      />
+      l
+      <input
+        type="checkbox"
+        name="size"
+        value={"l"}
+        onChange={onChange}
+        checked={size === "l"}
+      />
+      xl
+      <input
+        type="checkbox"
+        name="size"
+        value={"xl"}
+        onChange={onChange}
+        checked={size === "xl"}
+      />
       <input
         type="text"
         placeholder="Quantity"

@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 const ContentItem = ({ content }) => {
   const { id, name, colour, size, quantity } = content;
+
   return (
     <Fragment>
       <Card className="card" style={{ width: "12rem" }}>
@@ -14,13 +15,12 @@ const ContentItem = ({ content }) => {
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{colour}</Card.Subtitle>
           <Card.Text>{size}</Card.Text>
-          <Button>add to cart</Button>
+          <Button>add to cart </Button>
           {/*  <Card.Link href={href}>Card Link</Card.Link>
           <Card.Link href={href}>Another Link</Card.Link> */}
         </Card.Body>
       </Card>
     </Fragment>
-    ///////////////////
   );
 };
 

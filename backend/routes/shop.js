@@ -15,9 +15,9 @@ const Content = require("../models/Shop");
 
 router.get("/", auth, async (req, res) => {
   try {
-    //stuff represents all the items that are stored in the database
-    const stuff = await Content.find({}).sort({ date: -1 });
-    res.json(stuff);
+    //contents represents all the items that are stored in the database
+    const contents = await Content.find({}).sort({ date: -1 });
+    res.json(contents);
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");
@@ -42,6 +42,9 @@ router.post(
         .isEmpty(),
       check("size", "Size is required")
         .not()
+        .isEmpty(),
+      check("quantity", "Quantity is required")
+        .not()
         .isEmpty()
     ]
   ],
@@ -52,12 +55,13 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
     //input taken
-    const { name, colour, size } = req.body;
+    const { name, colour, size, quantity } = req.body;
     try {
       const newContent = new Content({
         name,
         colour,
         size,
+        quantity,
         user: req.user.id
       });
 
@@ -84,6 +88,7 @@ router.put("/:id", auth, async (req, res) => {
   if (name) contentFields.name = name;
   if (colour) contentFields.colour = colour;
   if (size) contentFields.size = size;
+  if (quantity) contentFields.quantity = quantity;
 
   try {
     let content = await Content.findById(req.params.id);
@@ -104,7 +109,7 @@ router.put("/:id", auth, async (req, res) => {
   }
 });
 
-// @router  PUT api/shop/:id
+// @router  Delete api/shop/:id
 // @desc    Get all content
 // @access  Private
 
