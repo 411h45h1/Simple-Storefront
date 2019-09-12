@@ -9,6 +9,8 @@ export const CLEAR_FILTER = "CLEAR_FILTER";
 export const SET_ALERT = "SET_ALERT";
 export const REMOVE_ALERT = "REMOVE_ALERT";
 export const CONTENT_ERROR = "CONTENT_ERROR";
+// -------------------Cart-------------------------
+export const ADD_COUNT = "ADD_COUNT";
 
 // -------------------auth-------------------------
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";

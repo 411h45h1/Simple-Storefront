@@ -40,6 +40,9 @@ router.post(
       check("colour", "Colour is required")
         .not()
         .isEmpty(),
+      check("price", "Price is required")
+        .not()
+        .isEmpty(),
       check("size", "Size is required")
         .not()
         .isEmpty(),
@@ -55,11 +58,12 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
     //input taken
-    const { name, colour, size, quantity } = req.body;
+    const { name, colour, price, size, quantity } = req.body;
     try {
       const newContent = new Content({
         name,
         colour,
+        price,
         size,
         quantity,
         user: req.user.id
@@ -81,12 +85,13 @@ router.post(
 // @access  Private (only for admin users)
 
 router.put("/:id", auth, async (req, res) => {
-  const { name, colour, size } = req.body;
+  const { name, colour, price, size, quantity } = req.body;
 
   // build content object
   const contentFields = {};
   if (name) contentFields.name = name;
   if (colour) contentFields.colour = colour;
+  if (price) contentFields.price = price;
   if (size) contentFields.size = size;
   if (quantity) contentFields.quantity = quantity;
 

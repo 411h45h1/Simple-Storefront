@@ -7,11 +7,12 @@ const ContentEdit = () => {
   const [content, setContent] = useState({
     name: "",
     colour: "",
+    price: "",
     size: "",
     quantity: ""
   });
 
-  const { name, colour, size, quantity } = content;
+  const { name, colour, price, size, quantity } = content;
   const onChange = e =>
     setContent({ ...content, [e.target.name]: e.target.value });
 
@@ -21,6 +22,7 @@ const ContentEdit = () => {
     setContent({
       name: "",
       colour: "",
+      price: "",
       size: "",
       quantity: ""
     });
@@ -41,6 +43,13 @@ const ContentEdit = () => {
         placeholder="Colour"
         name="colour"
         value={colour}
+        onChange={onChange}
+      />
+      <input
+        type="text"
+        placeholder="Price"
+        name="price"
+        value={price}
         onChange={onChange}
       />
       s

@@ -1,36 +1,52 @@
 import React from "react";
+import { CartContext } from "../context/cart/CartContext";
+
 import "../App.css";
 import Header from "./Header";
 import { Card } from "react-bootstrap";
 import HomePage from "./pages/HomePage";
 
 export default class Page extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    items: []
+  };
 
-    this.state = {
-      showItem: true
-    };
-    this.toggleHidden = this.toggleHidden.bind(this);
+  addToCart = this.addToCart.bind(this);
+  addToCart(contents) {
+    this.setState({
+      items: [...this.state.items, { contents }]
+    });
   }
 
-  toggleHidden() {
+  removeFromCart = this.removeFromCart.bind(this);
+  removeFromCart(i) {
+    const newArray = [...this.state.items];
+    newArray.splice(i, 1);
+
     this.setState({
-      showItem: false
+      items: newArray
     });
   }
 
   render() {
     return (
-      <div className="app">
-        <div>
-          <Header hide={this.toggleHidden} />
-          {this.state.showItem ? <HomePage /> : null}
-          <Card className="footer">
-            <p id="footerP">&copy;Reflex • ALL RIGHTS RESERVED</p>
-          </Card>
+      <CartContext.Provider
+        value={{
+          items: this.state.items,
+          addToCart: this.addToCart,
+          removeFromCart: this.removeFromCart
+        }}
+      >
+        <div className="app">
+          <div>
+            <Header />
+            <HomePage />
+            <Card className="footer">
+              <p id="footerP">&copy;Reflex • ALL RIGHTS RESERVED</p>
+            </Card>
+          </div>
         </div>
-      </div>
+      </CartContext.Provider>
     );
   }
 }

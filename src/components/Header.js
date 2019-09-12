@@ -3,14 +3,19 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../Reflex.svg";
 import HeadCarousel from "./HeadCarousel";
 import Store from "./pages/Store";
+import Cart from "./pages/Cart";
 import Projects from "./pages/projects";
 import FAQ from "./pages/FAQ";
 import HomePage from "./pages/HomePage";
+
+import CartLength from "../context/cart/CartLength";
 
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ContentEdit from "./content/ContentEdit";
 import Alerts from "../components/alerts/Alerts";
+import { CartContext } from "../context/cart/CartContext";
+//counter
 
 class Header extends React.Component {
   render() {
@@ -94,7 +99,9 @@ class Header extends React.Component {
                       color: "black"
                     }}
                   >
-                    cart(0)
+                    {/*counts number of items added */}
+                    cart(
+                    <CartLength />)
                   </Link>
                 </div>
                 <div>
@@ -115,6 +122,7 @@ class Header extends React.Component {
           <Alerts />
           <Route Path="/" exact={HomePage} />
           <Route path="/Shop" component={Store} />
+          <Route path="/Cart" component={Cart} />
           <Route path="/Projects" component={Projects} />
           <Route path="/FAQ" component={FAQ} />
           <Route path="/Login" component={Login} />
