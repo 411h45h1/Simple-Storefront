@@ -1,9 +1,19 @@
-## Reflex website (INCOMPLETE)
+<h1> Fullstack React Ecommerce website</h1>
 
--this repository is to be viewed as a demonstration of React, JavaScript &JSX comprehension.
+<h3>Notable Technologies used:</h3>
+<ul>
+  <li>MobX</li>
+  <li>Context API</li>
+  <li>bootstrap</li>
+  <li>react-router-dom</li>
+  <li>axios</li>
+  <li>Concurrently</li>
+  <li>bcryptjs</li>
+  <li>Mongoose</li>
+  <li>jsonwebtoken</li>
+  <li>nodemon</li>
+  <li>cors</li>
+</ul>
 
-Notable Technologies used
--Context API, bootstrap, Concurrently, react-router-dom, bcryptjs, Mongoose, jsonwebtoken, nodemon & cors
-
-Backend: Express JS and Mongodb.
 Frontend: React JS.
+Backend: Express JS, Mongodb & Mongodb Atlas.
