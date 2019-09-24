@@ -1,42 +1,45 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import { CartContext } from "../../context/cart/CartContext";
 import { Card } from "react-bootstrap";
+import { observer } from "mobx-react";
 
-export default props => (
-  <div className="shopCont">
-    <Card>
-      <div className="shopGrid">
-        <CartContext.Consumer>
-          {cart => (
-            <Fragment>
-              <Card className="card" style={{ width: "12rem" }}>
-                <Card.Body>
-                  <Card.Title>
+const Cart = observer(
+  class Cart extends Component {
+    render() {
+      return (
+        <Fragment>
+          <CartContext.Consumer>
+            {cart => (
+              <div className="shopCont">
+                <Card>
+                  <div className="shopGrid">
                     {cart.items.map(content => (
-                      <h4>{content.contents.name}</h4>
+                      <CartItem key={content.contents._id} content={content} />
                     ))}
-                  </Card.Title>
-                  <Card.Subtitle>
-                    {cart.items.map(content => (
-                      <p>{content.contents.colour}</p>
-                    ))}
-                  </Card.Subtitle>
-                  <Card.Subtitle>
-                    {cart.items.map(content => (
-                      <p>$ {content.contents.price}</p>
-                    ))}
-                  </Card.Subtitle>
-                  <Card.Text>
-                    {cart.items.map(content => (
-                      <p>{content.contents.size}</p>
-                    ))}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Fragment>
-          )}
-        </CartContext.Consumer>
-      </div>
-    </Card>
-  </div>
+                  </div>
+                </Card>
+              </div>
+            )}
+          </CartContext.Consumer>
+        </Fragment>
+      );
+    }
+  }
 );
+
+//provides the format for all items in cart
+const CartItem = observer(({ content }) => {
+  const { _id, name, colour, price, size } = content.contents;
+  return (
+    <Card className="card" style={{ width: "12rem" }}>
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">{colour}</Card.Subtitle>
+        <Card.Subtitle className="mb-2 text-muted">${price}</Card.Subtitle>
+        <Card.Text>{size}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
+});
+
+export default Cart;
