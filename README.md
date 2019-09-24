@@ -15,5 +15,6 @@
   <li>cors</li>
 </ul>
 
-Frontend: React JS.
-Backend: Express JS, Mongodb & Mongodb Atlas.
+<p>Frontend: React JS.</p>
+<p>Backend: Express JS, Mongodb & Mongodb Atlas.</p>
+
