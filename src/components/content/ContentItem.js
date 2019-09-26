@@ -1,7 +1,6 @@
 //provides structure for data from databse
-import React, { Fragment, useContext } from "react";
+import React, { Fragment } from "react";
 import { Card, Button } from "react-bootstrap";
-import ContentContext from "../../context/content/contentContext";
 import { CartContext } from "../../context/cart/CartContext";
 
 import PropTypes from "prop-types";

@@ -12,6 +12,14 @@ const Cart = observer(
             {cart => (
               <div className="shopCont">
                 <Card>
+                  <h2>
+                    Cart Total :{" "}
+                    {cart.items.reduce(
+                      (acc, curr) => acc + curr.contents.price,
+                      0
+                    )}
+                  </h2>
+
                   <div className="shopGrid">
                     {cart.items.map(content => (
                       <CartItem key={content.contents._id} content={content} />
@@ -26,10 +34,9 @@ const Cart = observer(
     }
   }
 );
-
 //provides the format for all items in cart
 const CartItem = observer(({ content }) => {
-  const { _id, name, colour, price, size } = content.contents;
+  const { name, colour, price, size } = content.contents;
   return (
     <Card className="card" style={{ width: "12rem" }}>
       <Card.Body>

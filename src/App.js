@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "./App.css";
 
 import Page from "./components/Page";
@@ -17,9 +17,9 @@ class App extends Component {
       <AuthState>
         <ContentState>
           <AlertState>
-            <Fragment className="BG">
+            <div className="BG">
               <Page />
-            </Fragment>
+            </div>
           </AlertState>
         </ContentState>
       </AuthState>

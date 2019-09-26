@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { CartContext } from "./CartContext";
 
 export default props => (

@@ -9,7 +9,11 @@ const HomePage = () => {
     authContext.loadUser();
     // eslint-disable-next-line
   }, []);
-  return <Fragment>{""}</Fragment>;
+  return (
+    <Fragment>{/*      <Card>
+        <h1>Home Page</h1>
+</Card> */}</Fragment>
+  );
 };
 
 export default HomePage;

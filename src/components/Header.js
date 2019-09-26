@@ -14,7 +14,6 @@ import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ContentEdit from "./content/ContentEdit";
 import Alerts from "../components/alerts/Alerts";
-import { CartContext } from "../context/cart/CartContext";
 //counter
 
 class Header extends React.Component {
@@ -85,10 +84,10 @@ class Header extends React.Component {
                 <div>
                   {/*social & cart*/}
                   <a href="https://twitter.com/illreflex">
-                    <i class="fab fa-twitter" />
+                    <i className="fab fa-twitter" />
                   </a>
                   <a href="https://instagram.com/illreflex">
-                    <i class="fab fa-instagram" />
+                    <i className="fab fa-instagram" />
                   </a>
                 </div>
                 <div>
