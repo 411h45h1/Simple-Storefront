@@ -14,7 +14,7 @@ class Projects extends React.Component {
       <div className="projects">
         <div>
           <Jumbotron className="jumbotron">
-            <h1>Podcast</h1>
+            <h2>Podcast</h2>
             <p>Description of Podcast</p>
 
             <OverlayTrigger
@@ -27,7 +27,7 @@ class Projects extends React.Component {
         </div>
         <div>
           <Jumbotron className="jumbotron">
-            <h1>Music</h1>
+            <h2>Music</h2>
             <p>Description of Music</p>
             <OverlayTrigger
               placement="bottom"
@@ -39,7 +39,7 @@ class Projects extends React.Component {
         </div>
         <div>
           <Jumbotron className="jumbotron">
-            <h1>Download our App</h1>
+            <h2>Download our App</h2>
             <p>Available on IOS and Android</p>
             <ButtonToolbar>
               <ButtonGroup className="buttonGroup">

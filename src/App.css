@@ -64,7 +64,8 @@ html {
 }
 
 .FAQ {
-  padding: 10px;
+  padding: 2%;
+  justify-content: space-around;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
 }
 
@@ -84,6 +85,7 @@ html {
 .projects {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .projects > div {
   display: flex;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Page from "./components/Page";
-import ContentState from "./context/content/ContentState";
+import ContentState from "./context/content/contentState";
 import AuthState from "./context/auth/AuthState";
 import AlertState from "./context/alert/AlertState";
 import setAuthToken from "./utils/setAuthToken";
