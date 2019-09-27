@@ -13,7 +13,7 @@ const Cart = observer(
               <div className="shopCont">
                 <Card>
                   <h2>
-                    Cart Total :{" "}
+                    Cart Total: $
                     {cart.items.reduce(
                       (acc, curr) => acc + curr.contents.price,
                       0
