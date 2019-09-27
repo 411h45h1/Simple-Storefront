@@ -1,5 +1,12 @@
 import React from "react";
-import { Jumbotron, Button, ButtonToolbar, ButtonGroup } from "react-bootstrap";
+import {
+  Jumbotron,
+  Button,
+  ButtonToolbar,
+  ButtonGroup,
+  OverlayTrigger,
+  Tooltip
+} from "react-bootstrap";
 
 class Projects extends React.Component {
   render() {
@@ -10,15 +17,24 @@ class Projects extends React.Component {
             <h1>Podcast</h1>
             <p>Description of Podcast</p>
 
-            <Button variant="outline-dark">Link to podcast</Button>
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>Coming Soon!</Tooltip>}
+            >
+              <Button variant="outline-dark">Link to podcast</Button>
+            </OverlayTrigger>
           </Jumbotron>
         </div>
         <div>
           <Jumbotron className="jumbotron">
             <h1>Music</h1>
             <p>Description of Music</p>
-
-            <Button variant="outline-dark">Link to Music</Button>
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>Coming Soon!</Tooltip>}
+            >
+              <Button variant="outline-dark">Link to Music</Button>
+            </OverlayTrigger>
           </Jumbotron>
         </div>
         <div>
@@ -27,8 +43,18 @@ class Projects extends React.Component {
             <p>Available on IOS and Android</p>
             <ButtonToolbar>
               <ButtonGroup className="buttonGroup">
-                <Button variant="outline-dark">IOS</Button>
-                <Button variant="outline-dark">Android</Button>
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Coming Soon!</Tooltip>}
+                >
+                  <Button variant="outline-dark">IOS</Button>
+                </OverlayTrigger>
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Coming Soon!</Tooltip>}
+                >
+                  <Button variant="outline-dark">Android</Button>
+                </OverlayTrigger>
               </ButtonGroup>
             </ButtonToolbar>
           </Jumbotron>

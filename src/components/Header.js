@@ -1,29 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../Reflex.svg";
 import HeadCarousel from "./HeadCarousel";
 import Store from "./pages/Store";
+import Cart from "./pages/Cart";
 import Projects from "./pages/projects";
 import FAQ from "./pages/FAQ";
 import HomePage from "./pages/HomePage";
 
+import CartLength from "../context/cart/CartLength";
+
 import Register from "./auth/Register";
 import Login from "./auth/Login";
+import ContentEdit from "./content/ContentEdit";
+import Alerts from "../components/alerts/Alerts";
+//counter
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  activeLink() {
-    this.setState({
-      showItem: false
-    });
-  }
   render() {
     return (
       <Router>
-        <div>
+        <Fragment>
           <div className="headerCont">
             <Link
               to="/"
@@ -47,7 +44,6 @@ class Header extends React.Component {
                       textDecoration: "none",
                       color: "black"
                     }}
-                    onClick={this.props.hide}
                   >
                     Home
                   </Link>
@@ -59,7 +55,6 @@ class Header extends React.Component {
                       textDecoration: "none",
                       color: "black"
                     }}
-                    onClick={this.props.hide}
                   >
                     Shop
                   </Link>
@@ -71,7 +66,6 @@ class Header extends React.Component {
                       textDecoration: "none",
                       color: "black"
                     }}
-                    onClick={this.props.hide}
                   >
                     ??????
                   </Link>
@@ -83,7 +77,6 @@ class Header extends React.Component {
                       textDecoration: "none",
                       color: "black"
                     }}
-                    onClick={this.props.hide}
                   >
                     FAQ
                   </Link>
@@ -91,10 +84,10 @@ class Header extends React.Component {
                 <div>
                   {/*social & cart*/}
                   <a href="https://twitter.com/illreflex">
-                    <i class="fab fa-twitter" />
+                    <i className="fab fa-twitter" />
                   </a>
                   <a href="https://instagram.com/illreflex">
-                    <i class="fab fa-instagram" />
+                    <i className="fab fa-instagram" />
                   </a>
                 </div>
                 <div>
@@ -104,9 +97,10 @@ class Header extends React.Component {
                       textDecoration: "none",
                       color: "black"
                     }}
-                    onClick={this.props.hide}
                   >
-                    cart(0)
+                    {/*counts number of items added */}
+                    cart(
+                    <CartLength />)
                   </Link>
                 </div>
                 <div>
@@ -116,7 +110,6 @@ class Header extends React.Component {
                       textDecoration: "none",
                       color: "black"
                     }}
-                    onClick={this.props.hide}
                   >
                     Login
                   </Link>
@@ -125,14 +118,16 @@ class Header extends React.Component {
             </header>
           </div>
           <HeadCarousel />
-
+          <Alerts />
           <Route Path="/" exact={HomePage} />
           <Route path="/Shop" component={Store} />
+          <Route path="/Cart" component={Cart} />
           <Route path="/Projects" component={Projects} />
           <Route path="/FAQ" component={FAQ} />
           <Route path="/Login" component={Login} />
           <Route path="/Register" component={Register} />
-        </div>
+          <Route path="/ContentEdit" component={ContentEdit} />
+        </Fragment>
       </Router>
     );
   }

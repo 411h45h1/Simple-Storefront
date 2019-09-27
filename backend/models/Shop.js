@@ -13,6 +13,10 @@ const ShopSchema = mongoose.Schema({
     type: String,
     require: true
   },
+  price: {
+    type: Number,
+    require: true
+  },
   size: {
     type: String,
     require: true
