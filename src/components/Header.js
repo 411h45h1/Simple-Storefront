@@ -95,7 +95,6 @@ class Header extends React.Component {
                     href="https://twitter.com/illreflex"
                     target="_blank"
                   >
-                    {/*social & cart*/}
                     <i className="fab fa-twitter" />
                   </Nav.Link>
                   <Nav.Link

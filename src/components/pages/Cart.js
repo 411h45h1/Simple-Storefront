@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { CartContext } from "../../context/cart/CartContext";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 
 const Cart = observer(
@@ -38,14 +38,24 @@ const Cart = observer(
 const CartItem = observer(({ content }) => {
   const { name, colour, price, size } = content.contents;
   return (
-    <Card className="card" style={{ width: "12rem" }}>
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{colour}</Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">${price}</Card.Subtitle>
-        <Card.Text>{size}</Card.Text>
-      </Card.Body>
-    </Card>
+    <CartContext.Consumer>
+      {cart => (
+        <Card className="card" style={{ width: "12rem" }}>
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{colour}</Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">${price}</Card.Subtitle>
+            <Card.Text>Size: {size}</Card.Text>
+            <Button
+              variant="danger"
+              onClick={() => cart.removeFromCart(content)}
+            >
+              Remove
+            </Button>
+          </Card.Body>
+        </Card>
+      )}
+    </CartContext.Consumer>
   );
 });
 
