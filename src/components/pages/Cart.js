@@ -36,7 +36,7 @@ const Cart = observer(
 );
 //provides the format for all items in cart
 const CartItem = observer(({ content }) => {
-  const { name, colour, price, size } = content.contents;
+  const { _id, name, colour, price, size } = content.contents;
   return (
     <CartContext.Consumer>
       {cart => (

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../Reflex.svg";
+import { ReactComponent as Logo } from "../LOGO.svg";
 import Navbar from "react-bootstrap/Navbar";
 import HeadCarousel from "./HeadCarousel";
 import Store from "./pages/Store";
@@ -46,7 +46,8 @@ class Header extends React.Component {
                       to="/"
                       style={{
                         textDecoration: "none",
-                        color: "black"
+                        color: "black",
+                        fontSize: 20
                       }}
                     >
                       Home
@@ -58,7 +59,8 @@ class Header extends React.Component {
                       to="/Shop"
                       style={{
                         textDecoration: "none",
-                        color: "black"
+                        color: "black",
+                        fontSize: 20
                       }}
                     >
                       Shop
@@ -70,10 +72,11 @@ class Header extends React.Component {
                       to="/Projects"
                       style={{
                         textDecoration: "none",
-                        color: "black"
+                        color: "black",
+                        fontSize: 20
                       }}
                     >
-                      ??????
+                      Projects
                     </Link>
                   </Nav.Link>
 
@@ -82,7 +85,8 @@ class Header extends React.Component {
                       to="/FAQ"
                       style={{
                         textDecoration: "none",
-                        color: "black"
+                        color: "black",
+                        fontSize: 20
                       }}
                     >
                       FAQ
@@ -111,7 +115,8 @@ class Header extends React.Component {
                       to="/Cart"
                       style={{
                         textDecoration: "none",
-                        color: "black"
+                        color: "black",
+                        fontSize: 20
                       }}
                     >
                       {/*counts number of items added */}
@@ -125,7 +130,8 @@ class Header extends React.Component {
                       to="/Login"
                       style={{
                         textDecoration: "none",
-                        color: "black"
+                        color: "black",
+                        fontSize: 20
                       }}
                     >
                       Login

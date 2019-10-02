@@ -19,9 +19,9 @@ export default class Page extends React.Component {
   }
 
   removeFromCart = this.removeFromCart.bind(this);
-  removeFromCart(i) {
+  removeFromCart(content) {
     const newArray = [...this.state.items];
-    newArray.splice(i, 1);
+    newArray.splice(content, 1);
 
     this.setState({
       items: newArray

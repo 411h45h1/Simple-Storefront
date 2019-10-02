@@ -11,7 +11,7 @@ function HeadCarousel() {
           alt="First slide"
         />
         <Carousel.Caption className="PicWords">
-          <h3>Reflex</h3>
+          <h3>Title 1</h3>
           <p>Screen 1</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -23,7 +23,7 @@ function HeadCarousel() {
         />
 
         <Carousel.Caption className="PicWords">
-          <h3>Reflex</h3>
+          <h3>Title 2</h3>
           <p>Screen 2</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -35,7 +35,7 @@ function HeadCarousel() {
         />
 
         <Carousel.Caption className="PicWords">
-          <h3>Reflex</h3>
+          <h3>Title 3</h3>
           <p>Screen 3</p>
         </Carousel.Caption>
       </Carousel.Item>

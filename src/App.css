@@ -8,25 +8,11 @@ html {
   background-size: cover;
 }
 
-/* Header */
+/* Social */
 
-.headerCont {
-  display: flex;
-  margin: auto;
-}
-
-.headerCont > header {
-  margin: auto;
-  margin-right: 0%;
-  justify-content: flex-end;
-}
-
-.headerLink {
-  display: flex;
-}
-
-.headerLink > div {
-  padding-right: 30px;
+.fab {
+  font-size: 23px;
+  color: black;
 }
 
 /*Carousel */
