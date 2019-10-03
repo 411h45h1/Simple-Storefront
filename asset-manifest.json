@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/React-JS-Store/static/css/main.aff28aab.chunk.css",
-    "main.js": "/React-JS-Store/static/js/main.e7c0a93f.chunk.js",
-    "main.js.map": "/React-JS-Store/static/js/main.e7c0a93f.chunk.js.map",
+    "main.css": "/React-JS-Store/static/css/main.0efa1f7e.chunk.css",
+    "main.js": "/React-JS-Store/static/js/main.c251e6ae.chunk.js",
+    "main.js.map": "/React-JS-Store/static/js/main.c251e6ae.chunk.js.map",
     "runtime~main.js": "/React-JS-Store/static/js/runtime~main.7309c2ed.js",
     "runtime~main.js.map": "/React-JS-Store/static/js/runtime~main.7309c2ed.js.map",
     "static/css/2.266e55a5.chunk.css": "/React-JS-Store/static/css/2.266e55a5.chunk.css",
-    "static/js/2.cd6a1918.chunk.js": "/React-JS-Store/static/js/2.cd6a1918.chunk.js",
-    "static/js/2.cd6a1918.chunk.js.map": "/React-JS-Store/static/js/2.cd6a1918.chunk.js.map",
+    "static/js/2.8cfc7824.chunk.js": "/React-JS-Store/static/js/2.8cfc7824.chunk.js",
+    "static/js/2.8cfc7824.chunk.js.map": "/React-JS-Store/static/js/2.8cfc7824.chunk.js.map",
     "index.html": "/React-JS-Store/index.html",
-    "precache-manifest.6e96e0a2c466c48b2d1f4732c8854fb9.js": "/React-JS-Store/precache-manifest.6e96e0a2c466c48b2d1f4732c8854fb9.js",
+    "precache-manifest.fe6629783ba5ea9f9817ea1bd66c14a6.js": "/React-JS-Store/precache-manifest.fe6629783ba5ea9f9817ea1bd66c14a6.js",
     "service-worker.js": "/React-JS-Store/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/React-JS-Store/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.aff28aab.chunk.css.map": "/React-JS-Store/static/css/main.aff28aab.chunk.css.map",
-    "static/media/Item3.png": "/React-JS-Store/static/media/Item3.d8705991.png",
-    "static/media/App.css": "/React-JS-Store/static/media/Landscape.e2c569e6.jpg",
-    "static/media/Reflex.0888aec8.svg": "/React-JS-Store/static/media/Reflex.0888aec8.svg"
+    "static/css/main.0efa1f7e.chunk.css.map": "/React-JS-Store/static/css/main.0efa1f7e.chunk.css.map",
+    "static/media/LOGO.ad343f56.svg": "/React-JS-Store/static/media/LOGO.ad343f56.svg"
   }
 }
