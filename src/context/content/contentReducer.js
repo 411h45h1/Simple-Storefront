@@ -1,12 +1,7 @@
-import { ADD_CONTENT, GET_CONTENT, CONTENT_ERROR, ADD_COUNT } from "../types";
+import { ADD_CONTENT, GET_CONTENT, CONTENT_ERROR } from "../types";
 
 export default (state, action) => {
   switch (action.type) {
-    case ADD_COUNT:
-      return {
-        ...state,
-        counter: [...(state.counter + 1)]
-      };
     case GET_CONTENT:
       return {
         ...state,

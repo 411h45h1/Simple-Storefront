@@ -1,7 +1,7 @@
 //!!reminder: add image storage within the Shop model
 const express = require("express");
 const connectDB = require("./config/db");
-
+const path = require("path");
 const app = express();
 
 // Connect Database
@@ -17,6 +17,16 @@ app.get("/", (req, res) => res.json({ msg: "api started" }));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/shop", require("./routes/shop"));
 app.use("/api/users", require("./routes/users"));
+
+// serve react in prod
+if (process.env.NODE_ENV === "production") {
+  // static assets react builds
+  app.use(express.static("/build"));
+  // if route '/' is hit find the index.html
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "build", "index.html"))
+  );
+}
 
 // looks for an env variable named port during production or port 5k
 const PORT = process.env.PORT || 5000;
