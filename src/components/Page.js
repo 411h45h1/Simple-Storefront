@@ -6,6 +6,12 @@ import Header from "./Header";
 import { Card } from "react-bootstrap";
 import HomePage from "./pages/HomePage";
 
+import setAuthToken from "../utils/setAuthToken";
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
+
 export default class Page extends React.Component {
   state = {
     items: []

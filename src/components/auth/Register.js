@@ -62,7 +62,6 @@ const Register = props => {
             onChange={onChange}
           />
         </div>
-
         <div>
           <label htmlFor="email">Email Address </label>
           <input
@@ -73,7 +72,6 @@ const Register = props => {
             onChange={onChange}
           />
         </div>
-
         <div>
           <label htmlFor="password">Password </label>
           <input
@@ -85,7 +83,6 @@ const Register = props => {
             minLength="6"
           />
         </div>
-
         <div>
           <label htmlFor="password2">Confirm Password </label>
           <input
@@ -97,7 +94,6 @@ const Register = props => {
             minLength="6"
           />
         </div>
-
         <input type="submit" value="Register" />
       </form>
     </div>

@@ -1,9 +1,9 @@
 import React, { useReducer } from "react";
 import axios from "axios";
-import uuid from "uuid";
 import contentContext from "./contentContext";
 import contentReducer from "./contentReducer";
-import { ADD_CONTENT, GET_CONTENT, CONTENT_ERROR } from "../types";
+//CONTENT_ERROR taken out
+import { ADD_CONTENT, GET_CONTENT } from "../types";
 
 const ContentState = props => {
   const initialState = {

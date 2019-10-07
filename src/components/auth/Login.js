@@ -51,7 +51,6 @@ const Login = props => {
         <div>
           <label htmlFor="email">Email Address </label>
           <input
-            required
             type="email"
             name="email"
             value={email}
@@ -63,8 +62,7 @@ const Login = props => {
         <div>
           <label htmlFor="password">Password </label>
           <input
-            required
-            type="password"
+            type="current-password"
             name="password"
             value={password}
             onChange={onChange}

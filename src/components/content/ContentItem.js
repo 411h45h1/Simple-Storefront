@@ -4,9 +4,9 @@ import { Card, Button } from "react-bootstrap";
 import { CartContext } from "../../context/cart/CartContext";
 
 import PropTypes from "prop-types";
-
+//_id and quantity taken out
 const ContentItem = ({ content }) => {
-  const { _id, name, colour, price, size, quantity } = content;
+  const { name, colour, price, size } = content;
   return (
     <CartContext.Consumer>
       {cart => (

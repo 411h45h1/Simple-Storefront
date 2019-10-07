@@ -1,6 +1,10 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import { Card } from "react-bootstrap";
 import AuthContext from "../../context/auth/authContext";
+import setAuthToken from "../../utils/setAuthToken";
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 const HomePage = () => {
   const authContext = useContext(AuthContext);
