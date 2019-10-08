@@ -22,7 +22,7 @@ const Cart = observer(
 
                   <div className="shopGrid">
                     {cart.items.map(content => (
-                      <CartItem key={content.contents._id} content={content} />
+                      <CartItem key={content.index} content={content} />
                     ))}
                   </div>
                 </Card>
