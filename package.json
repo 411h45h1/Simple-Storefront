@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.2",
     "config": "^3.2.2",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
@@ -25,7 +26,6 @@
     "mongoose": "^5.6.7"
   },
   "devDependencies": {
-    "concurrently": "^4.1.2",
     "nodemon": "^1.19.1"
   }
 }
