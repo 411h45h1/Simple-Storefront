@@ -11,9 +11,9 @@ const Content = require("../models/Shop");
 
 // @router  GET api/shop
 // @desc    Get all content
-// @access  Private
+// @access  Public
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     //contents represents all the items that are stored in the database
     const contents = await Content.find({}).sort({ date: -1 });
