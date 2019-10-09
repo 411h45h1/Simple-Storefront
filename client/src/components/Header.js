@@ -90,7 +90,7 @@ const Header = () => {
     <Router>
       <Fragment>
         <header>
-          <Navbar collapseOnSelect expand="sm" bg="#9C9C9C" variant="light">
+          <Navbar collapseOnSelect expand="lg" bg="#9C9C9C" variant="light">
             <Navbar.Brand>
               <Link
                 to="/"
@@ -161,13 +161,10 @@ const Header = () => {
               </Nav>
 
               <Nav>
-                <Nav.Link href="https://twitter.com/illreflex" target="_blank">
+                <Nav.Link href="https://twitter.com" target="_blank">
                   <i className="fab fa-twitter" />
                 </Nav.Link>
-                <Nav.Link
-                  href="https://instagram.com/illreflex"
-                  target="_blank"
-                >
+                <Nav.Link href="https://instagram.com" target="_blank">
                   <i className="fab fa-instagram" />
                 </Nav.Link>
               </Nav>

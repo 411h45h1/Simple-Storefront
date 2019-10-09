@@ -48,7 +48,7 @@ export default class Page extends React.Component {
             <Header />
             <HomePage />
             <Card className="footer">
-              <p id="footerP">&copy;Reflex • ALL RIGHTS RESERVED</p>
+              <p id="footerP">&copy;Company • ALL RIGHTS RESERVED</p>
             </Card>
           </div>
         </div>
