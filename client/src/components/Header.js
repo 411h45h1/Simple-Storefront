@@ -90,7 +90,7 @@ const Header = () => {
     <Router>
       <Fragment>
         <header>
-          <Navbar collapseOnSelect expand="md" bg="#9C9C9C" variant="light">
+          <Navbar collapseOnSelect expand="lg" bg="#9C9C9C" variant="light">
             <Navbar.Brand>
               <Link
                 to="/"
