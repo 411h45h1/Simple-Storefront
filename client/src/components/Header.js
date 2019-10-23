@@ -20,6 +20,10 @@ import { Nav } from "react-bootstrap";
 import Cart from "./pages/Cart";
 import CartLength from "../context/cart/CartLength";
 
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
+
 const Header = () => {
   const authContext = useContext(AuthContext);
 

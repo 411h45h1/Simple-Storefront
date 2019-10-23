@@ -29,7 +29,7 @@ function FAQ() {
               taxes, or lost shipments.) If you have any other questions
               regarding your order,{" "}
               <b>
-                <em>Email: illreflex@hotmail.com</em>
+                <em>Email: company@hotmail.com</em>
               </b>
             </p>
           </div>
