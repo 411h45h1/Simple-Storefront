@@ -20,9 +20,9 @@ import { Nav } from "react-bootstrap";
 import Cart from "./pages/Cart";
 import CartLength from "../context/cart/CartLength";
 
-if (localStorage.token) {
-  setAuthToken(localStorage.token);
-}
+// if (localStorage.token) {
+//    setAuthToken(localStorage.token);
+// }
 
 const Header = () => {
   const authContext = useContext(AuthContext);
@@ -40,7 +40,7 @@ const Header = () => {
         style={{
           marginTop: 8,
           color: "black",
-          fontSize: 20
+          fontSize: 20,
         }}
       >
         Welcome Back! {user && user.name}{" "}
@@ -52,7 +52,7 @@ const Header = () => {
           style={{
             textDecoration: "none",
             color: "black",
-            fontSize: 20
+            fontSize: 20,
           }}
         >
           Logout
@@ -69,7 +69,7 @@ const Header = () => {
           style={{
             textDecoration: "none",
             color: "black",
-            fontSize: 20
+            fontSize: 20,
           }}
         >
           Register
@@ -81,7 +81,7 @@ const Header = () => {
           style={{
             textDecoration: "none",
             color: "black",
-            fontSize: 20
+            fontSize: 20,
           }}
         >
           Login
@@ -100,7 +100,7 @@ const Header = () => {
                 to="/"
                 style={{
                   textDecoration: "none",
-                  color: "white"
+                  color: "white",
                 }}
               >
                 <Logo height="100px" width="200px" fill="black" />
@@ -117,7 +117,7 @@ const Header = () => {
                     style={{
                       textDecoration: "none",
                       color: "black",
-                      fontSize: 20
+                      fontSize: 20,
                     }}
                   >
                     Home
@@ -130,7 +130,7 @@ const Header = () => {
                     style={{
                       textDecoration: "none",
                       color: "black",
-                      fontSize: 20
+                      fontSize: 20,
                     }}
                   >
                     Shop
@@ -143,7 +143,7 @@ const Header = () => {
                     style={{
                       textDecoration: "none",
                       color: "black",
-                      fontSize: 20
+                      fontSize: 20,
                     }}
                   >
                     Projects
@@ -156,7 +156,7 @@ const Header = () => {
                     style={{
                       textDecoration: "none",
                       color: "black",
-                      fontSize: 20
+                      fontSize: 20,
                     }}
                   >
                     FAQ
@@ -180,7 +180,7 @@ const Header = () => {
                     style={{
                       textDecoration: "none",
                       color: "black",
-                      fontSize: 20
+                      fontSize: 20,
                     }}
                   >
                     {/*counts number of items added */}
