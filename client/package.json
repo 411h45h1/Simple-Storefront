@@ -5,18 +5,16 @@
   "author": "Ahmed Ali",
   "dependencies": {
     "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.5.2",
     "concurrently": "^4.1.2",
     "gh-pages": "^2.1.1",
-    "http-proxy-middleware": "^0.20.0",
     "mobx": "^5.14.0",
     "mobx-react": "^6.1.3",
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.0.1",
-    "reactstrap": "^8.0.1",
+    "react-scripts": "^3.4.1",
     "uuid": "^3.3.3"
   },
   "scripts": {
