@@ -34,6 +34,9 @@ html {
   margin-bottom: 1em;
 }
 
+#button:hover {
+  background-color: blue;
+}
 /*footer*/
 
 .footer {

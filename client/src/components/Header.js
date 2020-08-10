@@ -112,8 +112,6 @@ const Header = () => {
                   <Link
                     to="/"
                     style={{
-                      textDecoration: "none",
-                      color: "black",
                       fontSize: 20,
                     }}
                   >
@@ -125,8 +123,6 @@ const Header = () => {
                   <Link
                     to="/Shop"
                     style={{
-                      textDecoration: "none",
-                      color: "black",
                       fontSize: 20,
                     }}
                   >
@@ -149,8 +145,6 @@ const Header = () => {
                   <Link
                     to="/Cart"
                     style={{
-                      textDecoration: "none",
-                      color: "black",
                       fontSize: 20,
                     }}
                   >
