@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://dbAdminDev:9JL0ymvlyMw4nZtg@geopins.3lcu5.mongodb.net/ReactStore?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://reactStoreAdmin:pov65SO4ITia4m6W@cluster0.rbxnk.mongodb.net/storeBackend?retryWrites=true&w=majority",
   "jwtSecret": "Secret"
 }
