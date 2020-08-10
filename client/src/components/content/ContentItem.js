@@ -1,5 +1,5 @@
 //provides structure for data from databse
-import React, { Fragment } from "react";
+import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { CartContext } from "../../context/cart/CartContext";
 
@@ -9,8 +9,8 @@ const ContentItem = ({ content }) => {
   const { name, colour, price, size } = content;
   return (
     <CartContext.Consumer>
-      {cart => (
-        <Fragment>
+      {(cart) => (
+        <>
           <Card className="card" style={{ width: "12rem" }}>
             {/*<Card.Img variant="top" src={props.card.imgUrl} />*/}
             <Card.Body>
@@ -30,14 +30,14 @@ const ContentItem = ({ content }) => {
           <Card.Link href={href}>Another Link</Card.Link> */}
             </Card.Body>
           </Card>
-        </Fragment>
+        </>
       )}
     </CartContext.Consumer>
   );
 };
 
 ContentItem.propTypes = {
-  content: PropTypes.object.isRequired
+  content: PropTypes.object.isRequired,
 };
 
 export default ContentItem;

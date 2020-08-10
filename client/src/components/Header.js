@@ -1,13 +1,10 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import AuthContext from "../context/auth/authContext";
 
 import { ReactComponent as Logo } from "../LOGO.svg";
 import Navbar from "react-bootstrap/Navbar";
-import HeadCarousel from "./HeadCarousel";
 import Store from "./pages/Store";
-import Projects from "./pages/projects";
-import FAQ from "./pages/FAQ";
 import HomePage from "./pages/HomePage";
 
 import Register from "./auth/Register";
@@ -35,7 +32,7 @@ const Header = () => {
   };
 
   const authLinks = (
-    <Fragment>
+    <>
       <p
         style={{
           marginTop: 8,
@@ -58,11 +55,11 @@ const Header = () => {
           Logout
         </Link>
       </Nav.Link>
-    </Fragment>
+    </>
   );
 
   const guestLinks = (
-    <Fragment>
+    <>
       <Nav.Link>
         <Link
           to="/Register"
@@ -87,12 +84,12 @@ const Header = () => {
           Login
         </Link>
       </Nav.Link>{" "}
-    </Fragment>
+    </>
   );
 
   return (
     <Router>
-      <Fragment>
+      <>
         <header>
           <Navbar collapseOnSelect expand="lg" bg="#9C9C9C" variant="light">
             <Navbar.Brand>
@@ -136,32 +133,6 @@ const Header = () => {
                     Shop
                   </Link>
                 </Nav.Link>
-
-                <Nav.Link>
-                  <Link
-                    to="/Projects"
-                    style={{
-                      textDecoration: "none",
-                      color: "black",
-                      fontSize: 20,
-                    }}
-                  >
-                    Projects
-                  </Link>
-                </Nav.Link>
-
-                <Nav.Link>
-                  <Link
-                    to="/FAQ"
-                    style={{
-                      textDecoration: "none",
-                      color: "black",
-                      fontSize: 20,
-                    }}
-                  >
-                    FAQ
-                  </Link>
-                </Nav.Link>
               </Nav>
 
               <Nav>
@@ -195,17 +166,14 @@ const Header = () => {
           </Navbar>
         </header>
 
-        <HeadCarousel />
         <Alerts />
         <Route Path="/" exact={HomePage} />
         <Route path="/Shop" component={Store} />
         <Route path="/Cart" component={Cart} />
-        <Route path="/Projects" component={Projects} />
-        <Route path="/FAQ" component={FAQ} />
         <Route path="/Login" component={Login} />
         <Route path="/Register" component={Register} />
         <Route path="/ContentEdit" component={ContentEdit} />
-      </Fragment>
+      </>
     </Router>
   );
 };

@@ -3,7 +3,6 @@ import { CartContext } from "../context/cart/CartContext";
 
 import "../App.css";
 import Header from "./Header";
-import { Card } from "react-bootstrap";
 import HomePage from "./pages/HomePage";
 
 import setAuthToken from "../utils/setAuthToken";
@@ -14,13 +13,13 @@ if (localStorage.token) {
 
 export default class Page extends React.Component {
   state = {
-    items: []
+    items: [],
   };
 
   addToCart = this.addToCart.bind(this);
   addToCart(contents) {
     this.setState({
-      items: [...this.state.items, { contents }]
+      items: [...this.state.items, { contents }],
     });
   }
 
@@ -30,7 +29,7 @@ export default class Page extends React.Component {
     newArray.splice(content, 1);
 
     this.setState({
-      items: newArray
+      items: newArray,
     });
   }
 
@@ -40,16 +39,13 @@ export default class Page extends React.Component {
         value={{
           items: this.state.items,
           addToCart: this.addToCart,
-          removeFromCart: this.removeFromCart
+          removeFromCart: this.removeFromCart,
         }}
       >
         <div className="app">
           <div>
-            <Header />
             <HomePage />
-            <Card className="footer">
-              <p id="footerP">&copy;Company • ALL RIGHTS RESERVED</p>
-            </Card>
+            <Header />
           </div>
         </div>
       </CartContext.Provider>

@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 import { CartContext } from "../../context/cart/CartContext";
 import { Card, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
@@ -7,9 +7,9 @@ const Cart = observer(
   class Cart extends Component {
     render() {
       return (
-        <Fragment>
+        <>
           <CartContext.Consumer>
-            {cart => (
+            {(cart) => (
               <div className="shopCont">
                 <Card>
                   <h2>
@@ -21,7 +21,7 @@ const Cart = observer(
                   </h2>
 
                   <div className="shopGrid">
-                    {cart.items.map(content => (
+                    {cart.items.map((content) => (
                       <CartItem key={content.index} content={content} />
                     ))}
                   </div>
@@ -29,7 +29,7 @@ const Cart = observer(
               </div>
             )}
           </CartContext.Consumer>
-        </Fragment>
+        </>
       );
     }
   }
@@ -39,7 +39,7 @@ const CartItem = observer(({ content }) => {
   const { name, colour, price, size } = content.contents;
   return (
     <CartContext.Consumer>
-      {cart => (
+      {(cart) => (
         <Card className="card" style={{ width: "12rem" }}>
           <Card.Body>
             <Card.Title>{name}</Card.Title>

@@ -15,12 +15,6 @@ html {
   color: black;
 }
 
-/*Carousel */
-
-.HeadCarousel {
-  padding: 0.6%;
-}
-
 /*Store*/
 
 .shopCont {
@@ -36,23 +30,8 @@ html {
 }
 
 .card {
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
   margin-bottom: 1em;
-}
-
-/*FAQ*/
-
-.FAQCont {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2%;
-  justify-content: space-around;
-}
-
-.FAQ {
-  padding: 2%;
-  justify-content: space-around;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
 }
 
 /*footer*/
@@ -65,17 +44,6 @@ html {
 
 #footerP {
   justify-content: center;
-}
-
-/*Projects*/
-.projects {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.projects > div {
-  display: flex;
-  margin: 3%;
 }
 
 .buttonGroup {

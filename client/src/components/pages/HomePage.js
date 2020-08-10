@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import AuthContext from "../../context/auth/authContext";
 import setAuthToken from "../../utils/setAuthToken";
 
@@ -14,9 +14,31 @@ const HomePage = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <Fragment>{/*      <Card>
-        <h1>Home Page</h1>
-</Card> */}</Fragment>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        margin: 40,
+      }}
+    >
+      <div
+        style={{
+          flex: 1,
+        }}
+      >
+        <h4>Welcome, to the lightest full-stack demo you ever did see </h4>
+      </div>
+      <div
+        style={{
+          flex: 1,
+        }}
+      >
+        <p>
+          This web app was built/deployed to demonstrate the functionality of
+          the MERN (MongoDB, Express, React, Node.js) stack.
+        </p>
+      </div>
+    </div>
   );
 };
 
