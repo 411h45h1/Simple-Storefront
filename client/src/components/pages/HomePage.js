@@ -26,7 +26,7 @@ const HomePage = () => {
           flex: 1,
         }}
       >
-        <h4>Welcome, to the lightest full-stack demo you ever did see </h4>
+        <h4>Welcome, to the simplest full-stack demo you ever did see </h4>
       </div>
       <div
         style={{

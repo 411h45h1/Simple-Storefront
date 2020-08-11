@@ -44,8 +44,8 @@ export default class Page extends React.Component {
       >
         <div className="app">
           <div>
-            <HomePage />
             <Header />
+            <HomePage />
           </div>
         </div>
       </CartContext.Provider>

@@ -11,7 +11,7 @@ const Cart = observer(
           <CartContext.Consumer>
             {(cart) => (
               <div className="shopCont">
-                <Card>
+                <Card style={{ padding: 15 }}>
                   <h2>
                     Cart Total: $
                     {cart.items.reduce(
